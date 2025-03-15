@@ -1,0 +1,80 @@
+/* Style général de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; /* Ajout pour centrer tout le contenu verticalement */
+}
+
+/* Conteneur du formulaire */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-top: 20px;
+}
+
+/* Titre stylisé avec la classe .title */
+.title {
+    text-align: center; /* Centre le texte */
+    color: #333;
+    font-size: 24px; /* Taille de police du titre */
+    margin-bottom: 20px; /* Espacement sous le titre */
+    font-weight: bold; /* Rendre le titre plus visible */
+}
+
+/* Espacement entre les champs de formulaire */
+div {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Champs de saisie */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Bouton de soumission */
+button {
+    background-color: #0055ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Couleur du bouton au survol */
+button:hover {
+    background-color: #00d9c7;
+}
+
+/* Messages d'erreur */
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
