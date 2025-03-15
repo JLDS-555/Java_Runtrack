@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice FizzBuzz</title>
+</head>
+<body>
+    <h1>Exercice FizzBuzz</h1>
+    <div id="resultats"></div> <!-- Zone où les résultats seront affichés -->
+
+    <script>
+        // Fonction FizzBuzz
+        function fizzbuzz() {
+            // Accéder à l'élément où les résultats seront affichés
+            let resultatDiv = document.getElementById("resultats");
+            // Vider l'élément avant d'afficher les résultats
+            resultatDiv.innerHTML = "";
+
+            // Boucle qui parcourt les nombres de 1 à 151
+            for (let i = 1; i <= 151; i++) {
+                let message = ""; // Variable pour stocker le message à afficher
+
+                // Si le nombre est divisible par 3 et 5, afficher "FizzBuzz"
+                if (i % 3 === 0 && i % 5 === 0) {
+                    message = "FizzBuzz";
+                }
+                // Si le nombre est divisible par 3, afficher "Fizz"
+                else if (i % 3 === 0) {
+                    message = "Fizz";
+                }
+                // Si le nombre est divisible par 5, afficher "Buzz"
+                else if (i % 5 === 0) {
+                    message = "Buzz";
+                }
+                // Sinon, afficher le nombre
+                else {
+                    message = i;
+                }
+
+                // Ajouter le message au contenu de la page
+                resultatDiv.innerHTML += message + "<br>";
+            }
+        }
+
+        // Appel de la fonction FizzBuzz
+        fizzbuzz();
+    </script>
+</body>
+</html>
