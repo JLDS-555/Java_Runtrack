@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keylogger avec textarea</title>
+    <script>
+        // Fonction qui gère l'ajout de la lettre dans le textarea
+        function handleKeyPress(event) {
+            const keylogger = document.getElementById('keylogger');
+            const char = event.key;  // Récupère la touche pressée
+
+            // Vérifie que la touche pressée est une lettre (a-z ou A-Z)
+            if (char.match(/[a-zA-Z]/)) {
+                // Si le focus est dans le textarea, ajoute la lettre deux fois
+                if (document.activeElement === keylogger) {
+                    keylogger.value += char + char;
+                } else {
+                    // Si le focus est ailleurs, ajoute la lettre une seule fois
+                    keylogger.value += char;
+                }
+            }
+        }
+
+        // Attacher l'événement de keydown au document pour capturer les frappes clavier
+        document.addEventListener('keydown', handleKeyPress);
+    </script>
+</head>
+<body>
+
+    <!-- Le textarea avec l'id "keylogger" -->
+    <textarea id="keylogger" rows="10" cols="30" placeholder="Tapez ici..."></textarea>
+
+</body>
+</html>

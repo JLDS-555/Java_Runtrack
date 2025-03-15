@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compteur avec bouton</title>
+    <script>
+        // Fonction pour incrémenter le compteur
+        function addOne() {
+            const compteur = document.getElementById('compteur');
+            let currentCount = parseInt(compteur.innerText, 10); // Récupère la valeur actuelle du compteur
+            currentCount++; // Incrémente la valeur du compteur
+            compteur.innerText = currentCount; // Met à jour l'affichage du compteur
+        }
+
+        // Attacher l'événement au bouton une fois que le DOM est chargé
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.getElementById('button');
+            
+            // Ajouter un événement de clic sur le bouton
+            button.addEventListener('click', addOne);
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Le bouton pour déclencher l'événement -->
+    <button id="button">Cliquez-moi</button>
+
+    <!-- Le paragraphe contenant le compteur -->
+    <p id="compteur">0</p>
+
+</body>
+</html>

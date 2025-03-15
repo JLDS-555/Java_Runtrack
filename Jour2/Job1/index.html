@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afficher citation dans la console</title>
+    <script>
+        // Fonction pour afficher la citation dans la console
+        function citation() {
+            const citationText = document.getElementById('citation').innerText;
+            console.log(citationText); // Affiche le texte dans la console
+        }
+    </script>
+</head>
+<body>
+
+    <!-- L'élément article contenant la citation (initialement masqué) -->
+    <article id="citation" style="display: none;">
+        La vie a beaucoup plus d’imagination que nous.
+    </article>
+
+    <!-- Le bouton qui déclenche la fonction citation() lorsqu'on clique dessus -->
+    <button id="button" onclick="citation()">Afficher la citation dans la console</button>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afficher/Masquer l'article</title>
+    <script>
+        // Fonction qui gère l'ajout et la suppression de l'article
+        function showhide() {
+            const article = document.getElementById('article');
+            
+            // Si l'article existe déjà et est visible, on le cache
+            if (article) {
+                article.remove(); // On supprime l'article
+            } else {
+                // Si l'article n'existe pas encore, on le crée et l'ajoute
+                const newArticle = document.createElement('article');
+                newArticle.id = 'article';  // On lui donne un ID
+                newArticle.innerText = "L'important n'est pas la chute, mais l'atterrissage.";  // Le texte
+                document.body.appendChild(newArticle);  // On l'ajoute au body
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Le bouton qui déclenche la fonction showhide() lorsqu'on clique dessus -->
+    <button id="button" onclick="showhide()">Afficher/Masquer l'article</button>
+
+</body>
+</html>
